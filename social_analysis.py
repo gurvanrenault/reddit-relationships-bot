@@ -1,5 +1,6 @@
 # This file contain all the functions for social analysis  ( gender ,cliches, age , subject  ... ) posted in /r/relationships/
-
+import os
+from settings import SETTINGS
 cliches = [
     {
         "advice": "Break up",
@@ -69,7 +70,7 @@ cliches = [
 ]
 
 
-def display_information():
+def display_information(comments_analysed, submissions_analysed):
     os.system('cls' if os.name == 'nt' else 'clear')
     print "Analysing %d submissions for cliches" % (SETTINGS["SUBMISSIONS_TO_ANALYSE"])
     print "Analysed %d comments from %s submissions\n" % (comments_analysed, submissions_analysed + 1)

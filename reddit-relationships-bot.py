@@ -1,6 +1,5 @@
-import os
+
 import praw
-from settings import SETTINGS
 from  social_analysis import *  
 reddit = praw.Reddit(client_id=SETTINGS['REDDIT_CLIENT_ID'],
                      client_secret=SETTINGS['REDDIT_CLIENT_SECRET'],
@@ -20,9 +19,9 @@ for submission in submissions:
     for comment in submission.comments.list():
         analyse_comment(comment)
         comments_analysed += 1
-        display_information();
-    men,women,gender_analysed=analyse_gender_OP(submission.title,man,women,gender_analysed)
-    display_analyse_gender_OP(man,women,gender_analysed);
+        display_information(comments_analysed, submissions_analysed );
+    men,women,gender_analysed=analyse_gender_OP(submission.title,men,women,gender_analysed)
+    display_analyse_gender_OP(men,women,gender_analysed);
     submissions_analysed += 1
 
 print "\nComplete."
