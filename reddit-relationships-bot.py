@@ -83,6 +83,7 @@ def display_information():
     print "Analysed %d comments from %s submissions\n" % (comments_analysed, submissions_analysed + 1)
     for cliche in cliches:
         print "%s: %s" % (cliche['advice'], len(cliche['comments']))
+    print ('\n');
 
 def analyse_OP_age(submission):
     print "Anal"

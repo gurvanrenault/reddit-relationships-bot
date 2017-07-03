@@ -29,7 +29,7 @@ def analyse_gender_OP(post,man,women,tot_gender):
     return ( man,women,tot_gender);
 
 def  display_analyse_gender_OP(man,women,total):
-    print " Analysing the gender of originals posters .."
+    print "Analysing the gender of originals posters .."
     print "%s: %s" % ("Percentage of OP  men ",( (man*1.0)/total)*100) +'%'
     print "%s: %s " % ("Percentage of OP  women " , ( (women*1.0)/total)*100) +'%'
 
