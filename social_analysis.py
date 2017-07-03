@@ -7,7 +7,7 @@ def is_OP(div_id,sliped_post):
         return True;
     return False;
 
-def analyse_gender_OP(post,man,women,tot_gender):
+def analyse_gender_OP(post,men,women,tot_gender):
     # Analyse the gender of the Original Poster
     gender=False;
     open_brackets=["[","("];
@@ -24,13 +24,13 @@ def analyse_gender_OP(post,man,women,tot_gender):
                 tot_gender=tot_gender+1;
             if (post_splitted[div_id].count("m")!=0 or  post_splitted[div_id].count("M")!=0):
                 #OP is a men
-                man=man+1
+                men=men+1
                 tot_gender=tot_gender+1;
-    return ( man,women,tot_gender);
+    return ( men,women,tot_gender);
 
-def  display_analyse_gender_OP(man,women,total):
+def  display_analyse_gender_OP(men,women,total):
     print "Analysing the gender of originals posters .."
-    print "%s: %s" % ("Percentage of OP  men ",( (man*1.0)/total)*100) +'%'
+    print "%s: %s" % ("Percentage of OP  men ",( (men*1.0)/total)*100) +'%'
     print "%s: %s " % ("Percentage of OP  women " , ( (women*1.0)/total)*100) +'%'
 
 
